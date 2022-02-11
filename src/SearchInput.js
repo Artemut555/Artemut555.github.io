@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
-import styles from "./SearchInput.css";
+import styles from "./SearchInput.module.css";
 
 export default class SearchInput extends PureComponent {
   static propTypes = {
@@ -14,10 +14,8 @@ export default class SearchInput extends PureComponent {
 
   render() {
     return (
-      <div className="component-search-input">
-        <div>
-          <input onChange={this.handleChange} />
-        </div>
+      <div className={styles.componentSearchInput}>
+          <input onChange={this.handleChange} placeholder={"Поиск"} />
       </div>
     );
   }

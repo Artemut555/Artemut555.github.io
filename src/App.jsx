@@ -4,7 +4,7 @@ import SearchInput from "./SearchInput";
 import MovieResults from "./MovieResults";
 import filterMovie from "./filterMovie";
 import {RatingButton} from "./RatingButton";
-import styles from "./App.css";
+import styles from "./App.module.css";
 
 export default class App extends PureComponent {
   constructor(props) {
@@ -51,11 +51,11 @@ export default class App extends PureComponent {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className={styles.wrapper}>
         <Header />
 
         <SearchInput textChange={this.handleSearchChange} />
-        <div className={"listBody"}>
+        <div className={styles.listBody}>
           <MovieResults movieData={this.state.filteredMovie} />
           <RatingButton rateChange={this.handleRatingChange}/>
         </div>
