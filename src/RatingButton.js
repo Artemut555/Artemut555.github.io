@@ -1,14 +1,12 @@
 import * as React from 'react';
-import {PureComponent} from "react";
-import styles from "./RatingButton.css";
+import styles from "./RatingButton.module.css";
 
 export const RatingButton = ({rateChange}) => {
-    console.log(styles.ratingForm);
-
+    console.log(styles)
     return (
-        <div>
-        <div onChange={(event => rateChange(event))} className={"component-rating-button"}>
-            <form className={"ratingForm"}>
+        <div onChange={(event => rateChange(event))} className={`${styles.componentRatingButton}`}>
+            <form className={styles.ratingForm}>
+                <h1>Фильтры</h1>
                 {["Без оценки", 1, 2, 3, 4, 5].map(value => {
                     const num = value === "Без оценки" ? 0 : value;
                     return <div className={styles.ratingRadio} key={num}>
@@ -16,7 +14,6 @@ export const RatingButton = ({rateChange}) => {
                     </div>
                 })}
             </form>
-        </div>
         </div>
     );
 

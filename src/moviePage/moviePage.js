@@ -11,9 +11,9 @@ export default function MoviePage() {
     let params = useParams();
     const [movie, setMovie] = useState(null);
 
-    useEffect(async () => {
-        setMovie(await getMovie(parseInt(params.invoiceId, 10)));
-    }, []);
+    useEffect(() => {
+        (async () => setMovie(await getMovie(parseInt(params.invoiceId, 10))))();
+    }, [params.invoiceId]);
 
     async function handleRatingChange(event) {
         if (movie === null) {
@@ -27,7 +27,7 @@ export default function MoviePage() {
     return (
         <div className="movie-page">
             <div className="poster">
-                <img src={movie?.Poster} />
+                <img src={movie?.Poster} alt={"poster"} />
                 <span className="title">{movie?.Title}</span>
             </div>
             <div className="button">

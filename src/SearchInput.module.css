@@ -1,22 +1,20 @@
-.component-search-input {
+.componentSearchInput {
   position: relative;
   border-bottom: 1px solid #ccc;
   padding-top: 15px;
-  width: 1000px;
   height: 50px;
-}
-
-.component-search-input > div {
   margin: 0 10px 10px 10px;
-  /*height: 100px;*/
 }
 
-.component-search-input input {
+
+
+.componentSearchInput input {
   border-radius: 4px;
   border: 1px solid #bbb;
   box-sizing: border-box;
   font-size: 22px;
   padding: 10px 8px;
   height: 35px;
-  width: 1000px;
+  display: block;
+  width: 100%;
 }

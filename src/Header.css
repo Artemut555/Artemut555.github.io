@@ -6,4 +6,6 @@
   font-size: 32px;
   text-align: center;
   color: #333;
+  text-transform: uppercase;
+  letter-spacing: 7px;
 }
